@@ -18,102 +18,308 @@
 
         <!-- Styles -->
         <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
+            .hero.is-large .hero-body {
+                padding-bottom: 0;
+                padding-top: 10rem;
             }
-            .full-height {
-                height: 100vh;
+            .hero figure {
+                height: 0;
+                padding-bottom: 75%;
+                overflow: hidden;
             }
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
+            figure.image {
+                padding-left: 50px;
+                padding-right: 50px;
             }
-            .position-ref {
-                position: relative;
+            .bg-white {
+                background-color: #ffffff;
             }
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
+            .bg-light {
+                background-color: #faf6fb;
             }
-            .content {
-                text-align: center;
+            .media-left {
+                padding-left: 15px;
             }
-            .title {
-                font-size: 84px;
+            .media-left .icon {
+                margin-top: 15px;
+
             }
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
+
+            .media-content {
+                padding-left: 25px;
+            }
+
+            .media {
+                background-color: #ffffff;
+                padding: 25px;
+            }
+
+            .section {
+                padding: 7rem 5rem;
+            }
+
+            .content h1 {
+                margin-bottom: 2em;
+            }
+
+            #stn-download {
+                color: #ffffff;
+                background-image: linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
+            }
+
+            .hero.is-landing {
+                color: #ffffff;
+                background-image: linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
+            }
+
+            .hero.is-landing * {
+                color: #ffffff;
+            }
+
+            #stn-download h1 {
+                color: #ffffff;
+            }
+
+            .button.button-store {
+                border-radius: 3px;
+                background: #FFF;
+                box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.26);
+                font-size: 14px;
+                font-weight: 500;
+                color: #633991;
+                margin: 0.5rem;
+                padding: 0.7rem 1.6rem;
+                line-height: 1.8;
+                height: auto;
                 text-transform: uppercase;
+                transition: all 0.3s ease;
+
+                display: inline-block;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
             }
-            .versioninfo {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
+
+            .button.button-store:hover {
+                color: #000000;
+                background-color: #faf6fb;
             }
-            .framwork_title {
-                font-weight: 600;
-                padding-top: 20px;
-            }
-            .m-b-md {
-                margin-bottom: 30px;
+
+            .button.button-store img {
+                margin-right: 0.4rem;
+                vertical-align: text-bottom;
             }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
+      <div class="content-wrapper">
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                    <p class="versioninfo">Version {{ app()->version() }}</p>
-                </div>
+          <section class="hero is-landing is-large">
+              <div class="hero-head">
+                  <nav class="navbar">
+                      <div class="container">
+                          <div class="navbar-brand">
+                              <a class="navbar-item">
+                                  MOBILE APP
+                              </a>
+                              <span class="navbar-burger burger" data-target="mainNavbar">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </span>
+                          </div>
+                          <div id="mainNavbar" class="navbar-menu">
+                              <div class="navbar-end">
+                                  <a class="navbar-item">
+                                      Features
+                                  </a>
+                                  <a class="navbar-item">
+                                      FAQs
+                                  </a>
+                                  <span class="navbar-item">
+                                      <a class="button is-info is-inverted is-outlined">
+                                          <span>Download</span>
+                                      </a>
+                                  </span>
+                              </div>
+                          </div>
+                      </div>
+                  </nav>
+              </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+              <div class="hero-body">
+                  <div class="container has-text-centered">
 
-                <div class="foundation_button_test">
-                    <p class="framwork_title">Bulma 0.6.2</p>
-                    <p class="framwork_title">Bulma Extension 1.0.13</p>
+                      <div class="columns">
+                          <div class="column is-6 is-offset-3">
+                              <h1 class="title is-1">
+                                  Mobile App
+                              </h1>
+                              <h2 class="subtitle is-4">
+                                  The one and only solution for any kind of mobila app landing needs.
+                              </h2>
 
-                    <div class="block">
-                        <a class="button is-primary">Primary</a>
-                        <a class="button is-info">Info</a>
-                        <a class="button is-success">Success</a>
-                        <a class="button is-warning">Warning</a>
-                        <a class="button is-danger">Danger</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                              <figure class="image">
+                                  <img src="img/iphonex.png" alt="" width="768">
+                              </figure>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+          <section class="bg-light">
+              <div class="container section">
+                  <div class="content has-text-centered">
+                      <h1>Features you love</h1>
+                  </div>
+
+                  <nav class="columns">
+                      <div class="column has-text-centered">
+                          <article class="media">
+                              <figure class="media-left">
+                                  <span class="icon has-text-danger">
+                                      <i class="fas fa-cog fa-3x"></i>
+                                  </span>
+                              </figure>
+                              <div class="media-content">
+                                  <div class="content">
+                                      <h4 class="heading"><strong>Simple</strong></h4>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                      </p>
+                                  </div>
+                              </div>
+                          </article>
+                      </div>
+
+                      <div class="column has-text-centered">
+                          <article class="media">
+                              <figure class="media-left">
+                                  <span class="icon has-text-danger">
+                                      <i class="fas fa-cog fa-3x"></i>
+                                  </span>
+                              </figure>
+                              <div class="media-content">
+                                  <div class="content">
+                                      <h4 class="heading"><strong>Simple</strong></h4>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                      </p>
+                                  </div>
+                              </div>
+                          </article>
+                      </div>
+                      <div class="column has-text-centered">
+                          <article class="media">
+                              <figure class="media-left">
+                                  <span class="icon has-text-danger">
+                                      <i class="fas fa-cog fa-3x"></i>
+                                  </span>
+                              </figure>
+                              <div class="media-content">
+                                  <div class="content">
+                                          <h4 class="heading"><strong>Simple</strong></h4>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                          </p>
+                                  </div>
+                              </div>
+                          </article>
+                      </div>
+                  </nav>
+              </div>
+          </section>
+
+          <section class="bg-white">
+              <div class="container section">
+                  <div class="columns is-vcentered">
+                      <div class="column">
+                          <figure class="image">
+                              <img src="img/iphonex.png" alt="">
+                          </figure>
+                      </div>
+                      <div class="column ">
+                              <div class="content">
+                                  <h1>Discover your app</h1>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, debitis delectus doloribus dolorum eos est ex </p>
+
+                                  <a href="" class="button is-danger">Discover</a>
+                              </div>
+
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section class="bg-light">
+              <div class="container section">
+                  <div class="content has-text-centered">
+                      <h1>Frequently Ask Questions</h1>
+                  </div>
+
+                  <div class="columns">
+                      <div class="column is-half">
+                          <div class="title is-4">Can I try before I buy?</div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante.</p>
+                      </div>
+
+                      <div class="column is-half">
+                          <div class="title is-4">Can I try before I buy?</div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante.</p>
+                      </div>
+                  </div>
+
+                  <div class="columns">
+                      <div class="column is-half">
+                          <div class="title is-4">Can I try before I buy?</div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante.</p>
+                      </div>
+
+                      <div class="column is-half">
+                          <div class="title is-4">Can I try before I buy?</div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante.</p>
+                      </div>
+                  </div>
+
+              </div>
+          </section>
+
+
+          <section id="stn-download">
+              <div class="container section has-text-centered">
+                  <div class="columns">
+                      <div class="column is-half is-offset-one-quarter">
+
+                          <h1 class="title is-2">Download Anywhere</h1>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
+
+                          <a href="#" class="button button-store">
+                              <img src="img/appleicon.png" alt="icon"> Apple Store
+                          </a>
+
+                          <a href="#" class="button button-store">
+                              <img src="img/playicon.png" alt="icon"> Google play
+                          </a>
+                      </div>
+                  </div>
+
+              </div>
+          </section>
+
+          <footer class="footer">
+              <div class="container">
+                  <div class="content has-text-centered">
+                      <p>
+                          Mobile App built
+                          with
+                          <span class="icon has-text-danger">
+                              <i class="fas fa-heart"></i>
+                          </span>
+                          by <a href="https://petehouston.com">Pete Houston</a>
+                          @ 2018.
+                      </p>
+                  </div>
+              </div>
+          </footer>
+      </div>
     </body>
 </html>
